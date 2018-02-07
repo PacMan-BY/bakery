@@ -1,0 +1,345 @@
+body {
+    margin: 0;
+    background: black;
+    /*user-select: none;*/
+}
+
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'alegreya';
+    src: url('../fonts/alegreya.eot');
+    src: url('../fonts/alegreya.eot') format('embedded-opentype'),
+    url('../fonts/alegreya.woff2') format('woff2'),
+    url('../fonts/alegreya.woff') format('woff'),
+    url('../fonts/alegreya.ttf') format('truetype'),
+    url('../fonts/alegreya.svg#alegreya') format('svg');
+}
+
+@font-face {
+    font-family: 'scriptina';
+    src: url('../fonts/scriptina.eot');
+    src: url('../fonts/scriptina.eot') format('embedded-opentype'),
+    url('../fonts/scriptina.woff2') format('woff2'),
+    url('../fonts/scriptina.woff') format('woff'),
+    url('../fonts/scriptina.ttf') format('truetype'),
+    url('../fonts/scriptina.svg#scriptina') format('svg');
+}
+
+@font-face {
+    font-family: 'playfairdisplaybold';
+    src: url('../fonts/playfairdisplaybold.eot');
+    src: url('../fonts/playfairdisplaybold.eot') format('embedded-opentype'),
+    url('../fonts/playfairdisplaybold.woff2') format('woff2'),
+    url('../fonts/playfairdisplaybold.woff') format('woff'),
+    url('../fonts/playfairdisplaybold.ttf') format('truetype'),
+    url('../fonts/playfairdisplaybold.svg#playfairdisplaybold') format('svg');
+}
+
+@font-face {
+    font-family: 'ProximaNovaRegular';
+    src: url('../fonts/ProximaNovaRegular.eot');
+    src: url('../fonts/ProximaNovaRegular.eot') format('embedded-opentype'),
+    url('../fonts/ProximaNovaRegular.woff2') format('woff2'),
+    url('../fonts/ProximaNovaRegular.woff') format('woff'),
+    url('../fonts/ProximaNovaRegular.ttf') format('truetype'),
+    url('../fonts/ProximaNovaRegular.svg#ProximaNovaRegular') format('svg');
+}
+
+
+header {
+    background: url(../img/header_bg.png) no-repeat;
+    background-position: center 0;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    max-width: 1270px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.flex-col-cen {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.mar-a {
+    margin: auto;
+}
+
+.nav-menu_all {
+    background: rgba(142, 143, 137, 0.56);
+    position: fixed;
+    width: 100%;
+}
+
+.nav-menu {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.menu-logo {
+    font-family: 'scriptina';
+    color: rgb(250, 250, 250);
+    font-size: 30px;
+    letter-spacing: 6px;
+    position: relative;
+    top: -10px;
+}
+
+.menu-link {
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
+
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul a {
+    text-transform: uppercase;
+    font-family: 'alegreya';
+    font-size: 14px;
+    color: #ffffff;
+    padding: 0 40px;
+}
+
+nav li + li:before {
+    content: "~";
+    color: #ffffff;
+}
+
+.nav-social {
+    display: flex;
+}
+
+.nav-social i {
+    font-size: 16px;
+    color: #ffffff;
+
+}
+
+.nav-social a {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.nav-social a:last-child {
+    padding-right: 0;
+}
+
+header h1 {
+    font-family: 'playfairdisplaybold';
+    font-size: 92px;
+    color: rgb(255, 255, 255);
+    margin-top: 37%;
+}
+
+header h1:before {
+    content: :;
+    border-bottom: 2px dashed rgb(255, 255, 255)
+}
+
+.dashed-line {
+    background: url(../img/dashed-line.png);
+    background-repeat: no-repeat;
+    height: 12px;
+    max-width: 190px;
+}
+
+.header-subtitle {
+    font-family: 'ProximaNovaRegular';
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 1px 0px rgba(61, 48, 41, 0.004);
+    max-width: 520px;
+    text-align: center;
+    letter-spacing: 0.4px;
+    padding: 65px 0;
+}
+
+.Our_menu {
+    font-size: 14px;
+    font-family: 'alegreya';
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 20px 50px;
+    background-color: rgba(86, 83, 76, 0.529);
+    border: 1px dashed rgb(158, 156, 147);
+}
+
+.header-bread {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background: #fff;
+    background-image: url(../img/header-bread.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: calc(0px - 35px);
+    left: calc(50% - 35px);
+    transition: 1s;
+
+}
+
+
+
+.header-bread:hover {
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    background: #9e9c93;
+    background-image: url(../img/cap-header.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: calc(0px - 35px);
+    left: calc(50% - 35px);
+
+}
+
+.header-bread:after {
+    content: "";
+    width: 27px;
+    height: 27px;
+    background: #9e9c93;
+    position: absolute;
+    border-radius: 50%;
+    top: 14px;
+    left: -60px;
+    transition: 1s;
+    opacity: 0;
+}
+
+.header-bread :before {
+    content: "";
+    width: 28px;
+    height: 28px;
+    background: #9e9c93;
+    position: absolute;
+    border-radius: 50%;
+    top: 14px;
+    left: 105px;
+    transition: 1s;
+    opacity: 0;
+}
+
+.header-bread:hover:after,
+.header-bread:hover :before {
+    opacity: 1;
+}
+
+.wavy-circle {
+    position: absolute;
+    bottom: calc(0px - 55px);
+    left: calc(50% - 55px);
+    background-image: url(../img/wavy-circle.png);
+    background-repeat: no-repeat;
+    width: 110px;
+    height: 110px;
+    animation-name: spin;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*        media screen     */
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
+    .nav-menu ul a {
+        padding: 0 20px;
+    }
+    .nav-social a {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mama {
+    height: 1000px;
+}
